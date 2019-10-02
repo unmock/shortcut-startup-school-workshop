@@ -6,7 +6,6 @@
   "scripts": {
     "build": "webpack --mode=production && npm run copy_static_assets",
     "dev": "webpack && npm run copy_static_assets && concurrently \"webpack --watch\" \"nodemon dist\"",
-    "test-watch": "webpack --config webpack.test.js && concurrently \"webpack --config webpack.test.js --watch\" \"mocha --watch\"",
     "test": "jest",
     "start": "NODE_ENV=production node dist/index.js",
     "copy_static_assets": "node copy-assets.js",
