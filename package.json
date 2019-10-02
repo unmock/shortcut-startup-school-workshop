@@ -20,18 +20,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@unmock/githubv3": "^1.0.0",
     "axios": "^0.19.0",
     "compression": "^1.7.3",
     "dotenv": "^8.1.0",
     "express": "^4.16.4",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-router-dom": "^4.3.1",
-    "unmock": "^0.3.8"
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
+    "@unmock/githubv3": "^1.0.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^7.1.5",
@@ -52,6 +52,8 @@
     "jest": "^24.9.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.10",
+    "prettier": "^1.18.2",
+    "unmock": "^0.3.8",
     "unmock-jest": "^0.3.8",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
