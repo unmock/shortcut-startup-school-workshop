@@ -3,6 +3,8 @@ import fetchGitHubRepos from './github';
 
 let github;
 
+process.env.GITHUB_TOKEN = 'fake';
+
 describe('Fetching GitHub repositories', () => {
   beforeAll(() => { github = unmock.on().services.githubv3; });
   afterAll(() => { unmock.off(); });
