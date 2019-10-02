@@ -52,7 +52,7 @@ app.get('/', async (_, res) => {
   }
 });
 
-app.get('*', (req, res) => res.sendStatus(400));
+app.get('*', (_, res) => res.sendStatus(404));
 
 const { PORT = 3000 } = process.env;
 
