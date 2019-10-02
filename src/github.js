@@ -1,20 +1,22 @@
 import axios from 'axios';
+import logger from './logging';
 
 require('dotenv').config();
 
-let axiosI;
+const GITHUB_API = 'https://api.github.com';
+let axiosInstance;
 
-const axiosInstance = () => {
-  if (axiosI) {
-    return axiosI;
+const axiosClient = () => {
+  if (axiosInstance) {
+    return axiosInstance;
   }
 
   if (!process.env.GITHUB_TOKEN) {
-    throw Error('No GitHub token!');
+    throw Error('Environment variable GITHUB_TOKEN missing!');
   }
 
-  axiosI = axios.create({
-    baseURL: 'https://api.github.com',
+  axiosInstance = axios.create({
+    baseURL: GITHUB_API,
     timeout: 10000,
     headers: {
       Accept: 'application/vnd.github.v3+json',
@@ -22,16 +24,17 @@ const axiosInstance = () => {
     },
   });
 
-  return axiosI;
+  return axiosInstance;
 };
 
 
 const fetchGitHubRepos = async () => {
-  const instance = axiosInstance();
-  console.log('Making a request to GitHub: /user/repos');
-  const axiosResult = await instance.get('/user/repos');
+  const instance = axiosClient();
+  const path = '/user/repos';
+  logger.info(`Making a request to: ${GITHUB_API}, path: ${path}`);
+  const axiosResult = await instance.get(path);
   const { data } = axiosResult;
-  console.log(`Found ${data.length} repositories from github`);
+  logger.info(`Found ${data.length} repositories`);
   return data;
 };
 
