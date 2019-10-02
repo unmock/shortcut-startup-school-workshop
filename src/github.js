@@ -15,7 +15,7 @@ const axiosInstance = () => {
 
   axiosI = axios.create({
     baseURL: 'https://api.github.com',
-    timeout: 1000,
+    timeout: 10000,
     headers: {
       Accept: 'application/vnd.github.v3+json',
       Authorization: `token ${process.env.GITHUB_TOKEN}`,
@@ -28,9 +28,10 @@ const axiosInstance = () => {
 
 const fetchGitHubRepos = async () => {
   const instance = axiosInstance();
+  console.log('Making a request to GitHub: /user/repos');
   const axiosResult = await instance.get('/user/repos');
   const { data } = axiosResult;
-  console.log(data);
+  console.log(`Found ${data.length} repositories from github`);
   return data;
 };
 
