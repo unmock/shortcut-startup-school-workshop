@@ -7159,7 +7159,7 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^16.8.3:
+react-dom@^16.8.3, react-dom@^16.9.0:
   version "16.10.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.10.1.tgz#479a6511ba34a429273c213cbc2a9ac4d296dac1"
   integrity sha512-SmM4ZW0uug0rn95U8uqr52I7UdNf6wdGLeXDmNLfg3y5q5H9eAbdjF5ubQc3bjDyRrvdAB2IKG7X0GzSpnn5Mg==
@@ -7209,7 +7209,7 @@ react-test-renderer@^16.0.0-0:
     react-is "^16.8.6"
     scheduler "^0.16.1"
 
-react@^16.8.3:
+react@^16.8.3, react@^16.9.0:
   version "16.10.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.10.1.tgz#967c1e71a2767dfa699e6ba702a00483e3b0573f"
   integrity sha512-2bisHwMhxQ3XQz4LiJJwG3360pY965pTl/MRrZYxIBKVj4fOHoDs5aZAkYXGxDRO1Li+SyjTAilQEbOmtQJHzA==
@@ -8669,6 +8669,19 @@ unmock-core@^0.3.8:
     uuid "^3.3.2"
     winston "^3.2.1"
 
+unmock-jest@^0.3.8:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/unmock-jest/-/unmock-jest-0.3.8.tgz#6d70f698c1b41ba8ab6b1f6bd533cc72daf50c09"
+  integrity sha512-FSWR7jlgTVClyQHOolmrP0pmlCXQ809xhxk0s4uxw10mkRN+LN2IIIAlB+Xz74MrTtPI64nX+cBzN02+zJZBNw==
+  dependencies:
+    chalk "^2.4.2"
+    debug "^4.1.1"
+    lodash "^4.17.15"
+    react "^16.9.0"
+    react-dom "^16.9.0"
+    strip-ansi "^5.2.0"
+    xmlbuilder "^13.0.2"
+
 unmock@^0.3.8:
   version "0.3.8"
   resolved "https://registry.yarnpkg.com/unmock/-/unmock-0.3.8.tgz#068b74ca5dbcb14d7efe04878521f2683d3e758c"
@@ -9085,6 +9098,11 @@ xml-name-validator@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
   integrity sha512-A5CUptxDsvxKJEU3yO6DuWBSJz/qizqzJKOMIfUJHETbBw/sFaDxgd6fxm1ewUaM0jZ444Fc5vC5ROYurg/4Pw==
+
+xmlbuilder@^13.0.2:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-13.0.2.tgz#02ae33614b6a047d1c32b5389c1fdacb2bce47a7"
+  integrity sha512-Eux0i2QdDYKbdbA6AM6xE4m6ZTZr4G4xF9kahI2ukSEMCzwce2eX9WlTI5J3s+NU7hpasFsr8hWIONae7LluAQ==
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"
