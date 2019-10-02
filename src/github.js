@@ -27,7 +27,10 @@ const axiosClient = () => {
   return axiosInstance;
 };
 
-
+/**
+ * Fetch all GitHub repositories for the authenticated user.
+ * API documentation: https://developer.github.com/v3/repos/
+ */
 const fetchGitHubRepos = async () => {
   const instance = axiosClient();
   const path = '/user/repos';

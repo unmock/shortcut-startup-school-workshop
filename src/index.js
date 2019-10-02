@@ -21,7 +21,7 @@ app.use((req, _, next) => {
   next();
 });
 
-app.get('/', async (req, res) => {
+app.get('/', async (_, res) => {
   try {
     const repos = await fetchGitHubRepos();
 
@@ -47,17 +47,13 @@ app.get('/', async (req, res) => {
 
     res.send(html);
   } catch (err) {
-    console.error(err);
+    logger.error(err);
     res.sendStatus(500);
   }
 });
 
-app.get('*', (req, res) => res
-  .status(404)
-  .send(
-    '<body style="background-color: #3c3c3c;"><h1 style="font-family: sans-serif; color: #c7c7c7; text-align: center;">404 - Not Found</h1></body>',
-  ));
+app.get('*', (req, res) => res.sendStatus(400));
 
 const { PORT = 3000 } = process.env;
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}...`));  // eslint-disable-line
+app.listen(PORT, () => logger.info(`Listening on port ${PORT}...`));
