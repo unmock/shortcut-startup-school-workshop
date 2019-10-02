@@ -18,7 +18,8 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn build
-      # - unmock/upload
+      - run: yarn test
+      - unmock/upload
       - persist_to_workspace:
           root: ~/repo
           paths: .
