@@ -1,14 +1,14 @@
+
+// eslint-disable-line
 import compression from 'compression';
 import express from 'express';
 import path from 'path';
 import React from 'react';
-import axios from 'axios';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter as Router } from 'react-router-dom';
+import fetchGitHubRepos from './github';
 import App from './public/components/App';
 import stylesheet from './public/styles/stylesheet';
-
-require('dotenv').config();
 
 const app = express();
 
@@ -55,21 +55,6 @@ app.use('/static', express.static(path.resolve(__dirname, 'public')));
   })
 }) */
 
-const instance = axios.create({
-  baseURL: 'https://api.github.com',
-  timeout: 1000,
-  headers: {
-    Accept: 'application/vnd.github.v3+json',
-    Authorization: `token ${process.env.GITHUB_TOKEN}`,
-  },
-});
-
-const fetchGitHubRepos = async () => {
-  const axiosResult = await instance.get('/user/repos');
-  const { data } = axiosResult;
-  console.log(data);
-  return data;
-};
 
 app.get('/', async (req, res) => {
   try {
@@ -97,6 +82,7 @@ app.get('/', async (req, res) => {
 
     res.send(html);
   } catch (err) {
+    console.error(err);
     res.sendStatus(500);
   }
 });
