@@ -54,3 +54,7 @@ Note that running tests **should not require a GitHub access token**: they shoul
 1. Ideas:
    - Add test reporter
    - Add continuous deployment to Heroku
+
+## Disclaimer
+
+Note that the application server renders static markup and does not attempt to [hydrate](https://reactjs.org/docs/react-dom.html#hydrate) the markup. So adding event listeners etc. will fail. If you want to add interactivity, client-side routing, and/or more complex logic on what to fetch in server and in client, you might want to take a look at a framework like [Next.js](https://nextjs.org/).
