@@ -19,7 +19,11 @@ app.use((req, _, next) => {
   next();
 });
 
-app.get('/', async (_, res) => {
+app.get('/', (_, res) => {
+  res.redirect(301, '/repositories');
+});
+
+app.get('/repositories', async (_, res) => {
   try {
     const repos = await fetchGitHubRepos();
 
