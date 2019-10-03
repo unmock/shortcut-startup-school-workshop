@@ -1,8 +1,6 @@
 import axios from 'axios';
 import logger from './logging';
 
-require('dotenv').config();
-
 const GITHUB_API = 'https://api.github.com';
 const REPOSITORIES_PATH = '/user/repos';
 

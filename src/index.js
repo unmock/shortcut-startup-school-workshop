@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 import buildApp from './app';
 import logger from './logging';
 

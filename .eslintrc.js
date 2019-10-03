@@ -19,5 +19,7 @@ module.exports = {
   rules: {
     "react/prop-types": 0,
     "react/jsx-filename-extension": 0,
+    "import/first": 0,
+    "import/newline-after-import": 0
   },
 };
