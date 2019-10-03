@@ -33,7 +33,7 @@ const serverConfig = {
     filename: '[name]',
   },
   plugins: [new CopyPlugin([
-    { from: 'src/static', to: 'public' },
+    { from: 'src/static', to: 'static' },
   ])],
 };
 

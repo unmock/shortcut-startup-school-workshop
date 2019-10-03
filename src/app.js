@@ -25,7 +25,7 @@ const buildHtml = (component) => `
 export default () => {
   const app = express();
 
-  app.use('/static', express.static(path.resolve(__dirname, 'public')));
+  app.use('/static', express.static(path.resolve(__dirname, 'static')));
 
   app.use((req, _, next) => {
     logger.info(`Request: ${req.originalUrl}`);
