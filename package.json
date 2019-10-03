@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --mode=production && npm run copy_static_assets",
-    "dev": "webpack && npm run copy_static_assets && concurrently \"webpack --watch\" \"nodemon dist\"",
+    "build": "webpack --mode=production",
+    "dev": "webpack && concurrently \"webpack --watch\" \"nodemon dist\"",
     "test": "jest",
     "start": "NODE_ENV=production node dist/index.js",
     "copy_static_assets": "node copy-assets.js",
@@ -36,6 +36,7 @@
     "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
     "concurrently": "^3.6.1",
+    "copy-webpack-plugin": "^5.0.4",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
     "eslint": "^6.5.1",

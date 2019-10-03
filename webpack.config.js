@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 const path = require('path');
 
@@ -9,7 +10,7 @@ const js = {
     loader: 'babel-loader',
     options: {
       presets: ['@babel/preset-react', '@babel/preset-env'],
-      plugins: ["@babel/plugin-transform-runtime"],
+      plugins: ['@babel/plugin-transform-runtime'],
     },
   },
 };
@@ -31,26 +32,9 @@ const serverConfig = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name]',
   },
+  plugins: [new CopyPlugin([
+    { from: 'src/static', to: 'public' },
+  ])],
 };
 
-const clientConfig = {
-  mode: 'development',
-  target: 'web',
-  entry: {
-    'app.js': path.resolve(__dirname, 'src/public/app.js'),
-  },
-  module: {
-    rules: [js],
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist/public'),
-    filename: '[name]',
-  },
-};
-
-module.exports = [serverConfig, clientConfig];
+module.exports = [serverConfig];
