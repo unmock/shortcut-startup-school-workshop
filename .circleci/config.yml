@@ -6,17 +6,19 @@ version: 2.1
 
 jobs:
   build:
-    working_directory: ~/repo
+    working_directory: ~/app
     docker:
       - image: circleci/node:8.12.0
     steps:
+      # [task:advanced]: Add caching of npm packages here
       - checkout
       - run: yarn
       - run: yarn build
-      # Add test command here
+      # [task] Add test command here
 
 workflows:
   version: 2
   test-and-build:
     jobs:
       - build
+      # [task:advanced]: Add automatic deployment to Heroku here
