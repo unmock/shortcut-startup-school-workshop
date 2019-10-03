@@ -52,8 +52,6 @@
     "mocha": "^5.2.0",
     "nodemon": "^1.18.10",
     "prettier": "^1.18.2",
-    "unmock": "^0.3.8",
-    "unmock-jest": "^0.3.8",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-node-externals": "^1.7.2"
