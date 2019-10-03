@@ -3,25 +3,17 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2.1
-orbs:
-  unmock: unmock/unmock@0.0.9
-
-defaults: &defaults
-  working_directory: ~/repo
-  docker:
-    - image: circleci/node:8.12.0
 
 jobs:
   build:
-    <<: *defaults
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:8.12.0
     steps:
       - checkout
       - run: yarn
       - run: yarn build
-      # - unmock/upload
-      - persist_to_workspace:
-          root: ~/repo
-          paths: .
+      # Add test command here
 
 workflows:
   version: 2
