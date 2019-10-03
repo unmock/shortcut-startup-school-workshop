@@ -4,14 +4,18 @@ export default ({ repository, tabIndex }) => {
   const { name } = repository;
   return (
     <div className="repository">
-      <a href={repository.html_url} title={`Take me to GitHub repository ${name}`} tabIndex={tabIndex} className="repository__link">
+      <a href={repository.url} title={`Take me to GitHub repository ${name}`} tabIndex={tabIndex} className="repository__link">
         <div className="repository__title">
           {name}
         </div>
         <div className="repository__content">
           <p>
               Stars:
-            { repository.stargazers_count }
+            { repository.stars }
+          </p>
+          <p>
+              Description:
+            { repository.description }
           </p>
         </div>
       </a>
