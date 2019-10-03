@@ -1,40 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>Setting up CI/CD and integration tests</title>
+    <title>Setting up CI/CD and integration testing</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/sky.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<script src="js/reveal.js"></script>
+    <!-- Printing and PDF exports -->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="title" data-markdown>
+          <textarea data-template>
+			### CI/CD and integration testing
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+			[github.com/unmock/shortcut-startup-school-workshop](https://github.com/unmock/shortcut-startup-school-workshop)
+
+			[https://bit.ly/2nYyRnn](https://bit.ly/2nYyRnn)
+			
+			</textarea
+          >
+        </section>
+
+        <section id="toc" data-markdown>
+          <textarea data-template>
+			### Agenda
+
+			1. CI/CD
+			1. Testing
+			1. Example application
+			
+			</textarea
+          >
+        </section>
+
+        <section id="cicd" data-markdown>
+          <textarea data-template>
+			### What is CI/CD
+			</textarea
+          >
+        </section>
+
+        <section id="testing" data-markdown>
+          <textarea data-template>
+			### Introduction to testing
+			</textarea
+          >
+        </section>
+
+        <section id="types-of-tests" data-markdown>
+          <textarea data-template>
+						### Testing
+						Eric Elliott [says](https://www.sitepoint.com/javascript-testing-unit-functional-integration/):
+						- *Unit tests* ensure that individual components of the app work as expected.
+						- *Integration tests* ensure that component collaborations work as expected.
+						- *Functional tests* ensure that the app works as expected from the user’s perspective.
+					 </textarea
+          >
+        </section>
+        <section id="testing-apis" data-markdown>
+          <textarea data-template>
+			### Testing APIs
+			Using real APIs in tests is not recommended:
+			- Production data should be decoupled from tests
+			- Costs and rate-limits
+			- Bugs in code could have [drastic side-effects](https://dev.to/adamwknox/i-made-a-mistake-implementing-a-react-hook-and-got-a-denial-of-service-from-my-backend-5cji)
+			</textarea
+          >
+        </section>
+        <section id="testing-stragies" data-markdown>
+          <textarea data-template>
+				### Testing strategies
+				1. [Don't mock what you don't own](https://github.com/testdouble/contributing-tests/wiki/Don't-mock-what-you-don't-own)
+				1. Mock
+					- [external libraries](https://github.com/ctimmerm/axios-mock-adapter)
+					- [your own modules](https://jestjs.io/docs/en/manual-mocks#mocking-user-modules)
+				1. [Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection)
+				1. [unmock](https://www.unmock.io/)
+			</textarea
+          >
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        hash: true,
+        transition: "none",
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true },
+
+          // Zoom in and out with Alt+click
+          { src: "plugin/zoom-js/zoom.js", async: true },
+        ],
+      });
+    </script>
+  </body>
 </html>
