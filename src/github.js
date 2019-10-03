@@ -44,7 +44,10 @@ const transform = (repository) => ({
 
 /**
  * Fetch all GitHub repositories for the authenticated user.
+ * Removes private and forked repositories.
+ * Maps repositories to internal, simpler data format.
  * API documentation: https://developer.github.com/v3/repos/
+ * @returns List of authenticated user's public repositories
  */
 const fetchGitHubRepos = async () => {
   const client = axiosClient();
