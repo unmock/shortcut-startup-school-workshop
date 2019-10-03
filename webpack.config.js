@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const path = require('path');
 
@@ -8,8 +7,7 @@ const js = {
   use: {
     loader: 'babel-loader',
     options: {
-      presets: ['react', 'es2015'],
-      plugins: [],
+      presets: ['react', '@babel/preset-env'],
     },
   },
 };

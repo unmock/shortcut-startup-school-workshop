@@ -47,7 +47,7 @@ app.get('/', async (_, res) => {
 
     res.send(html);
   } catch (err) {
-    logger.error(err);
+    logger.error({ message: err.message, stack: err.stack });
     res.sendStatus(500);
   }
 });
