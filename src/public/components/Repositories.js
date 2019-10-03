@@ -7,7 +7,9 @@ export default ({ repositories }) => (
       My GitHub repositories
     </div>
     <div className="repositories__content">
-      { repositories.map((repo) => <Repository key={repo.name} repository={repo} />)}
+      { repositories.map(
+        (repo, i) => <Repository key={repo.name} repository={repo} tabIndex={i} />,
+      )}
     </div>
   </div>
 );

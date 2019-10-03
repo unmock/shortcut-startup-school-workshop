@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-export default ({ repository }) => {
+export default ({ repository, tabIndex }) => {
   const { name } = repository;
   return (
     <div className="repository">
-      <a href={repository.html_url} className="repository__link">
+      <a href={repository.html_url} title={`Take me to GitHub repository ${name}`} tabIndex={tabIndex} className="repository__link">
         <div className="repository__title">
           {name}
         </div>
