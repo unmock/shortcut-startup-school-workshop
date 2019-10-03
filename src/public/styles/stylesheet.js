@@ -1,8 +1,15 @@
 const stylesheet = `
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 .repositories {
     margin-top: 1rem;
-    /* font-size: 3rem;*/
-    
 }
 
 .repositories__title {
@@ -11,7 +18,7 @@ const stylesheet = `
     color: #87CEEB;
 }
 
-.repository {
+.repository__wrapper {
     border-style: solid;
     border-radius: 1rem;
     border-color: #87CEEB;
@@ -22,7 +29,13 @@ const stylesheet = `
     cursor: pointer;
 }
 
-.repository__link {
+.repository__wrapper a:visited {
+    color: #87CEEB;
+    text-decoration: none;
+}
+
+.repository__wrapper a:link {
+    color: #87CEEB;
     text-decoration: none;
 }
 
