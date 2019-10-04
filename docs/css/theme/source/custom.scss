@@ -1,7 +1,7 @@
 /**
- * Black theme for reveal.js. This is the opposite of the 'white' theme.
- *
- * By Hakim El Hattab, http://hakim.se
+ * Matrix theme for reveal.js, using black.scss as base theme.
+ * Colors from http://www.eclipsecolorthemes.org/?view=theme&id=467
+ * By Kimmo Sääskilahti.
  */
 
 // Default mixins and settings -----------------
@@ -9,14 +9,10 @@
 @import "../template/settings";
 // ---------------------------------------------
 
-// Include theme-specific fonts
-// @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-
-// @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+// Add fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Press+Start+2P&display=swap");
 
 // Override theme settings (see ../template/settings.scss)
-// $backgroundColor: #191919;
 $backgroundColor: #1e1e1e;
 
 $mainColor: #d9e577;
@@ -24,9 +20,7 @@ $headingColor: #60ff60;
 
 $mainFontSize: 2rem;
 $mainFont: "Open Sans", sans-serif;
-// $mainFont: "Press Start 2P", cursive;
 $headingFont: "Press Start 2P", cursive;
-// $headingFont: "Source Sans Pro", Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;

@@ -1,7 +1,8 @@
+@charset "UTF-8";
 /**
- * Black theme for reveal.js. This is the opposite of the 'white' theme.
- *
- * By Hakim El Hattab, http://hakim.se
+ * Matrix theme for reveal.js, using black.scss as base theme.
+ * Colors from http://www.eclipsecolorthemes.org/?view=theme&id=467
+ * By Kimmo Sääskilahti.
  */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Press+Start+2P&display=swap");
 section.has-light-background,
