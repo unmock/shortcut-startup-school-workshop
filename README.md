@@ -1,4 +1,4 @@
-# [Shortcut School of Startups Workshop](https://unmock.github.io/shortcut-startup-school-workshop/#/welcome)
+# [Shortcut School of Startups Workshop!](https://unmock.github.io/shortcut-startup-school-workshop/#/welcome)
 
 [![CircleCI](https://circleci.com/gh/unmock/shortcut-startup-school-workshop.svg?style=svg)](https://circleci.com/gh/unmock/shortcut-startup-school-workshop)
 
@@ -80,4 +80,4 @@ Hands-on:
 
 ## Disclaimer
 
-Note that the application server renders static markup and does not attempt to [hydrate](https://reactjs.org/docs/react-dom.html#hydrate) the markup. So adding event listeners etc. will fail. If you want to add interactivity, client-side routing, and/or more complex logic on what to fetch in server and in client, you might want to take a look at a framework like [Next.js](https://nextjs.org/).
+Note that the application server renders static markup and does not attempt to [hydrate](https://reactjs.org/docs/react-dom.html#hydrate) the markup. So adding event listeners etc. will fail. If you want to add interactivity, client-side routing, and/or more complex logic on what to fetch in server and in client, you might want to take a look at a framework like [Next.js](https://nextjs.org/)!
