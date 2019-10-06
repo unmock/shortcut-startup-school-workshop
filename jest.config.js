@@ -6,7 +6,7 @@ module.exports = {
   clearMocks: true,
 
   // Use this configuration option to add custom reporters to Jest
-  reporters: ['default'],
+  reporters: ['default', 'unmock-jest/reporter'],
 
   // The test environment that will be used for testing
   testEnvironment: 'node',
