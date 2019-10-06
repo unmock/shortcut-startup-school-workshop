@@ -4,7 +4,7 @@
 
 This is a Node.js application running an [Express](https://expressjs.com/) server and using [React](https://reactjs.org/) for server-side rendering. The application displays a list of **your** GitHub repositories (that's you, the developer).
 
-Accompanying slides can be found [here](https://unmock.github.io/shortcut-startup-school-workshop/#/welcome).
+Accompanying slides can be found [here](https://unmock.github.io/shortcut-startup-school-workshop/#/welcome)!
 
 ## Instructions
 
