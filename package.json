@@ -32,6 +32,7 @@
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
+    "@unmock/githubv3": "^1.0.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
@@ -52,6 +53,7 @@
     "nodemon": "^1.18.10",
     "prettier": "^1.18.2",
     "supertest": "^4.0.2",
+    "unmock": "^0.3.8",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-node-externals": "^1.7.2"
