@@ -2,7 +2,7 @@
 
 # [Shortcut School of Startups Workshop](https://unmock.github.io/shortcut-startup-school-workshop/#/welcome)
 
-[![CircleCI](https://circleci.com/gh/unmock/shortcut-startup-school-workshop.svg?style=svg)](https://circleci.com/gh/unmock/shortcut-startup-school-workshop)
+[![CircleCI](https://circleci.com/gh/Sulaymon333/shortcut-startup-school-workshop.svg?style=svg)](https://circleci.com/gh/Sulaymon333/shortcut-startup-school-workshop)
 
 This is a Node.js application running an [Express](https://expressjs.com/) server and using [React](https://reactjs.org/) for server-side rendering. The application displays a list of **your** GitHub repositories (that's you, the developer).
 
