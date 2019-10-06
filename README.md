@@ -81,3 +81,12 @@ Hands-on:
 ## Disclaimer
 
 Note that the application server renders static markup and does not attempt to [hydrate](https://reactjs.org/docs/react-dom.html#hydrate) the markup. So adding event listeners etc. will fail. If you want to add interactivity, client-side routing, and/or more complex logic on what to fetch in server and in client, you might want to take a look at a framework like [Next.js](https://nextjs.org/).
+
+## Deployment to Heroku
+
+1. Add the deploy job from `noitulos` branch to `.circleci/config.yml`
+1. Login to Heroku, install CLI, create API key
+1. Login with CLI: `heroku login`
+1. Create app: `heroku create`
+1. Add GITHUB_TOKEN in Heroku as ENV var
+1. Add `HEROKU_API_KEY` and `HEROKU_APP_NAME` in CircleCI
