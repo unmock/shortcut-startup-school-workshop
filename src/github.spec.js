@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-/* global describe, beforeAll, afterAll, beforeEach, it, expect */ // eslint-disable-line
-// import fetchGitHubRepos from './github';
-=======
 /* global describe, beforeAll, afterAll, afterEach, beforeEach, it, expect */
 import unmock, {
   Arr, runner, sinon, transform,
 } from 'unmock';
 import fetchGitHubRepos from './github';
->>>>>>> noitulos
 
-process.env.GITHUB_TOKEN = "fake";
+process.env.GITHUB_TOKEN = 'fake';
 
 let githubv3;
 
